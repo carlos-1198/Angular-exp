@@ -4,12 +4,13 @@ import { Product } from './product.model';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {// las variables que se definan aqui se
   title = 'store';         // pueden llamar en la vista
   items = ['carlos', 'neymar', 'messi'];
 
+  power = 10;
   products: Product[] = [
     {
       id: '1',
