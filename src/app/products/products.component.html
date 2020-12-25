@@ -1,10 +1,10 @@
-<p>products works!</p>
-<div class="container">
-    <div class="row"><!--outputs se llaman con ()-->
-      <app-product class="col-s-12 col-md-6 col-lg-4"
-        *ngFor="let product of products" 
-        (productClicked)="clickProduct($event)"   
-        [product]="product">
-      </app-product> <!--inputs se llaman con []-->
-    </div>
+<app-header></app-header>
+<div class="container pt-2">
+  <div class="row"><!--outputs se llaman con ()-->
+    <app-product class="col-s-12 col-md-6 col-lg-4"
+      *ngFor="let product of products" 
+      (productClicked)="clickProduct($event)"   
+      [product]="product">
+    </app-product> <!--inputs se llaman con []-->
   </div>
+</div>
