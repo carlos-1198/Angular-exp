@@ -3,42 +3,25 @@ import { NgModule } from '@angular/core';
 import { FormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { ProductComponent } from './components/product.component';
-import { CartComponent } from './cart/cart.component';
-import { ExponentialPipe } from './exponential.pipe';
-import { HomeComponent } from './home/home.component';
-import { ContactComponent } from './contact/contact.component';
 import { AppRoutingModule } from './app-routing.module';
-import { ProductsComponent } from './products/products.component';
-import { DemoComponent } from './demo/demo.component';
-import { HeaderComponent } from './header/header.component';
-import { BannerComponent } from './banner/banner.component';
-import { FooterComponent } from './footer/footer.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { LayoutComponent } from './layout/layout.component';
+
+import { SharedModule } from './shared/shared.module';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductComponent,
-    CartComponent,
-    ExponentialPipe,
-    HomeComponent,
-    ContactComponent,
-    ProductsComponent,
-    DemoComponent,
-    HeaderComponent,
-    BannerComponent,
-    FooterComponent,
     PageNotFoundComponent,
-    ProductDetailComponent
+    LayoutComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    FontAwesomeModule
+    SharedModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

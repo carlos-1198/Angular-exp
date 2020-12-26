@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faAd, faEnvelope  } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope  } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faGooglePlus, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
@@ -8,7 +8,6 @@ import { faFacebook, faGooglePlus, faInstagram, faTwitter } from '@fortawesome/f
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
-  faAd = faAd;
   faTwitter = faTwitter;
   faFacebook = faFacebook;
   faInstagram = faInstagram;

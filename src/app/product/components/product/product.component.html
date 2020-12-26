@@ -4,6 +4,7 @@
         <img [src]="product.image" alt="">
         <h5 class="card-title">{{product.price}}</h5>
         <button (click)="addCart()" class="btn btn-primary center">Agregar al carrito</button>
+        <a class="btn btn-success" [routerLink]="['/products',product.id]">Ver detalles</a>
     </div>
 </div>
     
