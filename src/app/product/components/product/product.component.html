@@ -1,8 +1,10 @@
 <div class="text-center mb-4">
     <div class="card-header text-white bg-dark">{{product.title}}</div>
     <div class="card-body">
-        <img [src]="product.image" alt="">
-        <h5 class="card-title">{{product.price}}</h5>
+        <div class="size-img">
+            <img [src]="product.image" alt="">
+        </div> 
+        <h5 class="card-title">{{product.price| currency}}</h5>
         <button (click)="addCart()" class="btn btn-primary center">Agregar al carrito</button>
         <a class="btn btn-success" [routerLink]="['/products',product.id]">Ver detalles</a>
     </div>
