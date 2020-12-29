@@ -1,9 +1,15 @@
 <div class="container">
-    <div class="row">
-        <img [src]="product.image" alt="imagen producto">
-        <p>{{product.title}}</p>
-        <p>{{product.price | currency}}</p> <!--currency es un pipe para dinero-->
-        <p>{{product.description}}</p>
-        <a routerLink="/products" class="btn btn-primary">Regresar</a>
+    <div *ngIf="product" class="row">
+        <div class="col-md-6 offset-md-3 text-center pt-3 pb-3">
+            <div class="size-img">
+                <img [src]="product.image" alt="imagen producto">
+            </div>
+            <p>{{product.title}}</p>
+            <p>{{product.price | currency}}</p> <!--currency es un pipe para dinero-->
+            <p>{{product.description}}</p>
+            <button (click)="updateProduct()" class="btn btn-update text-white">Update</button>
+            <button (click)="deleteProduct()" class="btn btn-danger">Delete</button>
+            <a routerLink="/products" class="btn btn-success">Regresar</a>
+        </div>     
     </div>
 </div>

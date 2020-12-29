@@ -1,0 +1,15 @@
+.thead-dark{
+    color: #fff;
+    background-color: #343a40;
+}
+
+#edit-icon {
+    margin-right: 5px;
+    font-size:25px;
+    color:blue;
+}
+
+#delete-icon {
+    font-size:25px;
+    color:red;
+}
