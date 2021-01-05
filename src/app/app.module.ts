@@ -3,6 +3,11 @@ import { NgModule } from '@angular/core';
 import { FormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { environment } from '../environments/environment';
+
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -17,7 +22,9 @@ import { NavComponent } from './admin/components/nav/nav.component';
     AppComponent,
     PageNotFoundComponent,
     LayoutComponent,
-    NavComponent
+    NavComponent,
+    // LoginComponent,
+    // RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -26,6 +33,9 @@ import { NavComponent } from './admin/components/nav/nav.component';
     SharedModule,
     CoreModule,
     HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFireStorageModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

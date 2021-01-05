@@ -6,7 +6,10 @@
         <a class="nav-link" routerLink="/contact" routerLinkActive="active">Contact</a>
       </div>
       <div class="ml-auto">
-        <button class="btn btn-outline-info"><fa-icon [icon]="faCartArrowDown"></fa-icon> Carrito</button>
+        <a routerLink="/order" class="btn btn-outline-primary">
+          <fa-icon [icon]="faCartArrowDown"></fa-icon> 
+          Carrito <span class="badge rounded-pill bg-danger">{{totalProducts$ |async}}</span>
+        </a>
       </div>
   </div>  
 </nav>

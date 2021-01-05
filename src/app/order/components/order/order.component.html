@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            <ul>
+                <li *ngFor="let product of (products$ | async)">
+                    <div class="row">
+                        <div class="col">
+                            <p>{{product.title}}</p>
+                            <p>{{product.price}}</p>
+                        </div>
+                        <div class="col">
+                            <img [src]="product.image" alt="">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

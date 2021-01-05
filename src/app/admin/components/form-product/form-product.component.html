@@ -1,0 +1,49 @@
+<div class="container pt-4">
+    <form [formGroup]="form" (ngSubmit) ="saveOrUpdate($event)" class="col-md-6 offset-md-3">
+        <div *ngIf="!isFormEdit" class="form-group row">
+            <div class="col-sm-10">
+                <label class="pb-1">id</label>
+                <input formControlName="id" type="text" class="form-control" placeholder="id">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-10">
+                <label class="pt-2 pb-2">title</label>
+                <input formControlName="title" type="text" class="form-control" placeholder="title">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-10">
+                <label class="pt-2 pb-2">Image</label>
+                <img *ngIf="(image$ | async) as img" [src]="img" alt="">
+                <input type="file" (change)="uploadFile($event)" class="form-control" placeholder="title">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-10">
+                <label class="pt-2 pb-2">price</label>
+                <input formControlName="price" type="number" class="form-control" placeholder="price">
+                <div *ngIf=" form.get('price').errors && form.get('price').dirty">
+                    <p class="alert alert-warning" *ngIf= "form.get('price').hasError('price_invalid')">El precio maximo es de $10000</p>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-10">
+                <label class="pt-2 pb-2">description</label>
+                <textarea formControlName="description" class="form-control mb-2" rows="3" placeholder="description"></textarea>
+                <div *ngIf="!isFormEdit">
+                    <div *ngIf="form.invalid">
+                        <p class="alert alert-info">Digita todos los campos</p>
+                    </div>  
+                 </div>
+            </div>             
+        </div>
+        <div *ngIf="!isFormEdit">
+            <button [disabled]="form.invalid" type="submit" class="btn btn-primary">Crear</button>
+        </div>
+        <div *ngIf="isFormEdit">
+            <button [disabled]="form.invalid" type="submit" class="btn btn-primary">Actualizar</button>
+        </div>     
+    </form>
+</div>

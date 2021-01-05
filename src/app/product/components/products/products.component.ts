@@ -76,12 +76,11 @@ fetchProducts(){
 
 createProduct(){
   const newProduct: Product = {
-    id: '10',
-    title: 'Agregando desde interfaz',
-    description: 'prueba',
-    price: 75000,
-    image: 'assets/images/banner-3.jpg'
-
+    id: '6',
+    image: 'assets/images/stickers2.png',
+    title: 'Stickers',
+    price: 80000,
+    description: 'bla bla bla bla bla'
   };
   this.productService.createProduct(newProduct)
   .subscribe(product => {

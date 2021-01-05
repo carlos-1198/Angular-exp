@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "pear-store-9f505": {
+      "hosting": {
+        "store": [
+          "pear-store-9f505"
+        ]
+      }
+    }
+  }
+}

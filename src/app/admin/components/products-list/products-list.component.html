@@ -1,7 +1,15 @@
 <div class="container pt-4">
     <div class="row">
-        <div class="table-responsive col-md-8 offset-md-2">
-            <table class="table pt-4 text-center">
+        <div class="table-responsive col-md-8 offset-md-2"> 
+            <div class="row align-items-center">
+                <div class="col"><h2>Crear Producto</h2></div>
+                <div class="col">
+                    <a id="create-icon" routerLink="/admin/products/create">
+                        <fa-icon [icon]="faPlusCircle"></fa-icon>
+                    </a>
+                </div>
+            </div>
+            <table class="table pt-4 text-center "> <!--  rgba(0,0,0,.42)  height: 1px;-->
                 <thead class="thead-dark">
                     <tr>
                         <th scope="col">ID</th>
@@ -16,8 +24,8 @@
                         <td>{{product.title}}</td>
                         <td>{{product.price}}</td>
                         <td>
-                            <a id="edit-icon" href=""><fa-icon [icon]="faEdit"></fa-icon></a>
-                            <a id="delete-icon" href=""><fa-icon [icon]="faTrashAlt"></fa-icon></a>
+                            <a id="edit-icon" [routerLink]="['edit', product.id]"><fa-icon [icon]="faEdit"></fa-icon></a>
+                            <a id="delete-icon" routerLink="/admin/products" (click)="deleteProduct(product.id)"><fa-icon [icon]="faTrashAlt"></fa-icon></a>
                         </td>
                     </tr>
                 </tbody>

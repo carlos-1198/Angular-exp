@@ -1,9 +1,9 @@
-body{
+.notFound{
     background: #33cc99;
     color:#fff;
     font-family: 'Open Sans', sans-serif;
-    max-height:700px;
     overflow: hidden;
+    bottom: 0;
     background-color: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,118,0.9864320728291317) 52%, rgba(0,212,255,1) 100%);
 }
 .c{

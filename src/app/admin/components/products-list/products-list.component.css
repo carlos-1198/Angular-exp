@@ -6,10 +6,15 @@
 #edit-icon {
     margin-right: 5px;
     font-size:25px;
-    color:blue;
+    color:#2d5d8b;
 }
 
 #delete-icon {
     font-size:25px;
-    color:red;
+    color:#ab4630  ;
+}
+
+#create-icon {
+    font-size:2.3em;
+    color: #506d79;
 }
