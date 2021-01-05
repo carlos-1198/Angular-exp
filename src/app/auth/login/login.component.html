@@ -1,15 +1,36 @@
-<div class="container pt-4">
-    <form [formGroup]="form" (ngSubmit) ="logIn($event)" class="col-md-6 offset-md-3">
-        <div class="form-group row">
-            <div class="col-sm-10">
-                <input formControlName="email" type="email" class="form-control" placeholder="email">
+<div class="main">
+    <div class="container">
+        <div class="middle">
+            <div id="login">
+                <form [formGroup]="form" (ngSubmit) ="logIn($event)">
+                    <fieldset class="clearfix">
+                        <p>
+                            <fa-icon [icon]="faUser"></fa-icon> 
+                            <input formControlName="email" type="email" placeholder="email" required>
+                        </p>
+                        <p>
+                            <fa-icon [icon]="faLock"></fa-icon> 
+                            <input formControlName="password" type="password" placeholder="password"required>
+                        </p> 
+                        <div>
+                            <span style="width:60%; text-align:left;  display: inline-block;">
+                                <a class="small-text" href="#">Forgot password?</a>                                
+                            </span>
+                            <span style="width:40%; text-align:right;  display: inline-block;">
+                                <button class="btn btn-log"[disabled]="form.invalid" type="submit">Sign In</button>
+                            </span>
+                        </div>
+                        <a class="small-text" routerLink="/auth/register">Register</a>
+                    </fieldset>
+                    <div class="clearfix"></div>
+                </form>
+
+                <div class="clearfix"></div>
+
+            </div> <!-- end login -->
+            <div class="logo"> Log In
+                <div class="clearfix"></div>
             </div>
         </div>
-        <div class="form-group row">
-            <div class="col-sm-10">
-                <input formControlName="password" type="password" class="form-control" placeholder="password">
-            </div>
-        </div>
-        <button [disabled]="form.invalid" type="submit" class="btn btn-primary">Ingresar</button>   
-    </form>
+    </div>
 </div>

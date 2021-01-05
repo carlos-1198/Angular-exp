@@ -58,33 +58,35 @@ export class ProductsComponent implements OnInit {
     private productService: ProductsService
   ) { }
 
-  ngOnInit(){
+  ngOnInit() {
     this.fetchProducts();
   }
 
-clickProduct(id: number){
-  console.log('product');
-  console.log(id);
-}
+  clickProduct(id: number) {
+    console.log('product');
+    console.log(id);
+  }
 
-fetchProducts(){
-  this.productService.getAllProducts()
-    .subscribe(products => {
-      this.products = products;
-    });
-}
+  fetchProducts() {
+    this.productService.getAllProducts()
+      .subscribe(products => {
+        this.products = products;
+      });
+  }
 
-createProduct(){
-  const newProduct: Product = {
-    id: '6',
-    image: 'assets/images/stickers2.png',
-    title: 'Stickers',
-    price: 80000,
-    description: 'bla bla bla bla bla'
-  };
-  this.productService.createProduct(newProduct)
-  .subscribe(product => {
-    console.log(product);
-  });
-}
+  /*
+  createProduct() {
+    const newProduct: Product = {
+      id: '6',
+      image: 'assets/images/stickers2.png',
+      title: 'Stickers',
+      price: 80000,
+      description: 'bla bla bla bla bla'
+    };
+    this.productService.createProduct(newProduct)
+      .subscribe(product => {
+        console.log(product);
+      });
+  }
+  */
 }

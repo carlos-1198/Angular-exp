@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService} from '../../core/services/auth.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { faLock } from '@fortawesome/free-solid-svg-icons';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-register',
@@ -11,6 +13,8 @@ import { Router } from '@angular/router';
 
 export class RegisterComponent implements OnInit {
   form: FormGroup;
+  faLock = faLock;
+  faUser = faUser;
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
